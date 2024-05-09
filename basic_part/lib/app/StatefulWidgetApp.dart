@@ -6,14 +6,9 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App>{
-  // 显示/隐藏AppBar
-  bool showAppBar = true;
   int currentAppBottomNavigationBarItem = 0;
   void onTapAppBottomNavigationBarItem (int index) {
     currentAppBottomNavigationBarItem = index;
-    setState(() {
-      showAppBar = index == 0;
-    });
   }
   final pageMain = [
     TabBarView(
@@ -51,7 +46,7 @@ class _AppState extends State<App>{
         child: Scaffold(
           body: pageMain.elementAt(currentAppBottomNavigationBarItem),
           backgroundColor: Colors.black,
-          appBar: showAppBar ? AppBar(
+          appBar: AppBar(
             title: Image.asset(
               'assets/images/icon.png',
               width: 32,
@@ -70,7 +65,7 @@ class _AppState extends State<App>{
                 Tab(text: '热门')
               ]
             ),
-          ) : null,
+          ),
           bottomNavigationBar: BottomNavigationBar(
             items: [
               BottomNavigationBarItem(
@@ -88,14 +83,6 @@ class _AppState extends State<App>{
             ],
             currentIndex: currentAppBottomNavigationBarItem,
             onTap: onTapAppBottomNavigationBarItem
-          ),
-          floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.share_outlined),
-            onPressed: () {
-              print('floating action button');
-            },
-            backgroundColor: Colors.black87,
-            foregroundColor: Colors.white70,
           ),
         ),
       ),
