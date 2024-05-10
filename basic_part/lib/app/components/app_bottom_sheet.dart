@@ -20,6 +20,17 @@ class AppBottomSheet extends StatelessWidget {
       ),
     );
   }
+  void showAppSnackBar(context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('提交成功'),
+        action: SnackBarAction(
+          label: '关闭',
+          onPressed:  () {  },
+        ),
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,7 +50,9 @@ class AppBottomSheet extends StatelessWidget {
           child: Text('提交'),
           onPressed: () async {
             final result = await showAppAplertDialog(context);
-            print('showAppAplertDialog $result');
+            if (result != null && result) {
+              showAppSnackBar(context);
+            }
           },
         ),
       ),
