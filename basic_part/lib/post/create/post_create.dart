@@ -7,7 +7,7 @@ class PostCreate extends StatelessWidget{
       child: Icon(
         Icons.add_a_photo_outlined,
         size: 128,
-        color: Colors.black12
+        color: Colors.white
       ),
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:basic_part/app/components/app_page_header.dart';
 import 'package:basic_part/app/components/app_page_main.dart';
+import 'package:basic_part/app/components/app_page_bottom.dart';
+import 'package:basic_part/app/components/app_floating_action_button.dart';
 
 
 // 常用的组件： StatelessWidget StatefulWidget
@@ -30,33 +32,12 @@ class _AppState extends State<App>{
           ),
           backgroundColor: Colors.black,
           appBar: showAppBar ? AppPageHeader() : null, // 顶部导航
-          bottomNavigationBar: BottomNavigationBar(
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.explore_outlined),
-                label: '发现'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.add_a_photo_outlined),
-                label: '添加'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle_outlined),
-                label: '用户'
-              ),
-            ],
+          bottomNavigationBar: AppPageBottom(
             currentIndex: currentAppBottomNavigationBarItem,
-            onTap: onTapAppBottomNavigationBarItem
+            onTap: onTapAppBottomNavigationBarItem,
           ),
-          floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.share_outlined),
-            onPressed: () {
-              print('floating action button');
-            },
-            backgroundColor: Colors.black87,
-            foregroundColor: Colors.white70,
-          ),
-        ),
+          floatingActionButton: AppFloatingActionButton(),
+        )
       ),
       debugShowCheckedModeBanner: false,
     );
