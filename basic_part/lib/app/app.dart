@@ -3,6 +3,7 @@ import 'package:basic_part/app/components/app_page_header.dart';
 import 'package:basic_part/app/components/app_page_main.dart';
 import 'package:basic_part/app/components/app_page_bottom.dart';
 import 'package:basic_part/app/components/app_floating_action_button.dart';
+import 'package:basic_part/app/components/app_page_aside.dart';
 
 
 // 常用的组件： StatelessWidget StatefulWidget
@@ -37,6 +38,7 @@ class _AppState extends State<App>{
             onTap: onTapAppBottomNavigationBarItem,
           ),
           floatingActionButton: AppFloatingActionButton(),
+          drawer: AppPageAside(),
         )
       ),
       debugShowCheckedModeBanner: false,
