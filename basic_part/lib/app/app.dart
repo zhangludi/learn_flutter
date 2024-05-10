@@ -80,7 +80,7 @@ class _AppState extends State<App> {
                 icon: Icon(Icons.explore_outlined),
                 label: "发现"
               ),
- BottomNavigationBarItem(
+              BottomNavigationBarItem(
                 icon: Icon(Icons.add_a_photo_outlined),
                 label: "添加"
               ),
