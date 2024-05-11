@@ -21,9 +21,17 @@ class AppPageBottom extends StatelessWidget {
           icon: Icon(Icons.account_circle_outlined),
           label: '用户'
         ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.sports_volleyball),
+          label: '练习'
+        ),
       ],
       currentIndex: currentIndex,
-      onTap: onTap
+      onTap: onTap,
+      unselectedItemColor: Colors.black,
+      selectedItemColor: Colors.deepOrangeAccent,
+      showSelectedLabels: true,
+      type: BottomNavigationBarType.fixed,
     );
   }
 }

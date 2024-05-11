@@ -37,7 +37,7 @@ class _AppState extends State<App>{
             currentIndex: currentAppBottomNavigationBarItem,
             onTap: onTapAppBottomNavigationBarItem,
           ),
-          floatingActionButton: AppFloatingActionButton(),
+          // floatingActionButton: AppFloatingActionButton(),
           drawer: AppPageAside(),
         )
       ),

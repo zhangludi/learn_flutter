@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:basic_part/post/create/post_create.dart';
 import 'package:basic_part/user/profile/user_profile.dart';
 import 'package:basic_part/post/index/post_index.dart';
+import 'package:basic_part/playground/playground.dart';
 
 
 class AppPageMain extends StatelessWidget{
@@ -12,6 +13,7 @@ class AppPageMain extends StatelessWidget{
     // 添加
     PostCreate(),
     UserProfile(),
+    Playground(),
   ];
   @override
   Widget build(BuildContext context) {
