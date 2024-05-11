@@ -1,30 +1,24 @@
+import 'package:basic_part/app/components/app_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:basic_part/playground/layout/componentes/playground_layout_item.dart';
 class PlaygroundLayout extends StatelessWidget{
   @override
   Widget build (BuildContext context) {
-    return SizedBox.expand(
-      child: Container(
-        color: Colors.greenAccent,
-        child: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Expanded(
-                flex: 2,
-                child: PlaygroundLayoutItem('1'),
-              ),
-              Expanded(
-                flex: 1,
-                child: PlaygroundLayoutItem('1'),
-              ),
-              PlaygroundLayoutItem('2'),
-              PlaygroundLayoutItem('3'),
-            ],
-          ),
-          
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        Image.asset(
+          'assets/images/icon.png',
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.cover
         ),
-      )
+        Positioned(
+          bottom: 24,
+          right: 24,
+          child: AppLogo(size: 64,)
+        )
+      ],
     );
   }
 }
