@@ -3,6 +3,7 @@ import 'package:basic_part/app/themes/app_theme.dart';
 import 'package:basic_part/app/components/app_header.dart';
 import 'package:basic_part/app/components/app_bottom.dart';
 import 'package:basic_part/app/components/app_main.dart';
+import 'package:basic_part/app/components/app_floating_action_button.dart';
 
 class App extends StatefulWidget {
   @override
@@ -32,12 +33,7 @@ class _AppState extends State<App> {
             currentIndex: currentBottomNavigatorBarItem,
             onTap: onTapBottomNavigatorBarItem
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: Colors.black87,
-            foregroundColor: Colors.white70,
-            child: Icon(Icons.share_outlined),
-          ),
+          floatingActionButton: AppFloatingActionButton(),
         ),
       ),
       theme: AppTheme.light,
